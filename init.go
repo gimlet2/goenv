@@ -31,6 +31,7 @@ export PS1="($(basename $GOPATH))$PS1"
 mkdir -p $(dirname $GOPATH/src/{{.ImportPath}})
 rm -f $GOPATH/src/{{.ImportPath}}
 ln -s {{.ProjectPath}} $GOPATH/src/{{.ImportPath}}
+cd $GOPATH/src/{{.ImportPath}}
 
 deactivate() {
 	export PS1=$GOENV_OLDPS1
@@ -39,6 +40,7 @@ deactivate() {
 
 	unset GOENV GOENV_OLDPS1 GOENV_OLDPATH GOENV_OLDGOPATH
 	unset -f deactivate
+	cd {{.ProjectPath}}
 }
 `
 
