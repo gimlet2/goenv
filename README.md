@@ -36,7 +36,7 @@ go get github.com/crsmithdev/goenv
 Within your project directory, create a goenv:
 
 ```
-goenv github.com/me/myproject
+goenv init github.com/me/myproject
 ```
 
 Activate the goenv:
