@@ -32,6 +32,11 @@ Install this package:
 ```
 go get github.com/crsmithdev/goenv
 ```
+or
+```
+go get github.com/gimlet2/goenv
+```
+to install from this fork.
 
 Within your project directory, create a goenv:
 
