@@ -31,6 +31,7 @@ export PS1="($(basename $GOPATH))$PS1"
 mkdir -p $(dirname $GOPATH/src/{{.ImportPath}})
 rm -f $GOPATH/src/{{.ImportPath}}
 ln -s {{.ProjectPath}} $GOPATH/src/{{.ImportPath}}
+ln -s $GOPATH/bin $GOPATH/src/{{.ImportPath}}/bin
 cd $GOPATH/src/{{.ImportPath}}
 
 deactivate() {
